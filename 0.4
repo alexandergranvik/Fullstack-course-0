@@ -3,8 +3,9 @@ sequenceDiagram
   participant Server
   
   Browser ->> Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-
+  activate server
   Server ->> Browser: HTML document new_ note
+  deactivate server
   
   note: reloads page and gets the HTML documents, CSS file and JS file 
 
