@@ -1,14 +1,13 @@
-,,,mermaid
 sequenceDiagram
-  participant Browser
-  participant Server
+  participant browser
+  participant server
   
-  Browser ->> Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+  browser ->> server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
   activate server
-  Server ->> Browser: HTML document new_ note
+  server -->> browser: HTML document new_ note
   deactivate server
-  
-  note: reloads page and gets the HTML documents, CSS file and JS file 
+
+  note: reloads page and gets the HTML documents, CSS file and JS file
 
   browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
   activate server
@@ -24,4 +23,3 @@ sequenceDiagram
   activate server
   server-->>browser: the JavaScript file
   deactivate server
-,,,
